@@ -6,17 +6,17 @@ public class PlayerHolding : MonoBehaviour {
 
     public static bool hasObject;
     public static GameObject holdingObject;
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update ()
     {
-        // On left click (we dont need to look at the object to put it down)
-        if (Input.GetMouseButtonDown(0))
+        // Only occur if we are holding an object.
+        if (hasObject)
         {
-            // Only occur if we are holding an object.
-            if (hasObject)
-            {
-                //Remove all collisions from this object.
+            // On left click (we dont need to look at the object to put it down)
+            if (Input.GetMouseButtonDown(0))
+        {
+                //Add collisions back to this object.
                 holdingObject.GetComponent<Collider>().enabled = true;
 
                 //detach object from player
@@ -25,7 +25,7 @@ public class PlayerHolding : MonoBehaviour {
                 holdingObject.GetComponent<Rigidbody>().useGravity = true;
 
                 //Player is no longer holding an object
-                PlayerHolding.hasObject = false;
+                hasObject = false;
             }
         }
 
