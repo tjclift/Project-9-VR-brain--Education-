@@ -2,43 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttachMe : MonoBehaviour {
+public class AttachToMe : MonoBehaviour {
 
-    // The object(s) which we are allowed to attach here.
+    public float distanceFromPlayer;
     public GameObject attachableObject;
-
-
-    // To make sure the player is within a suitable range to attach the fNRIS hat.
-    private float distance;
-    private GameObject player;
-    public float attachRange = 3.0f;
 
     // Use this for initialization
     void Start ()
     {
-        //Initalize the player.
-        player = GameObject.Find("Player");
+
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        distance = Vector3.Distance(player.transform.position, transform.position);
+        distanceFromPlayer = GameVariables.DistanceFromPlayer(gameObject);
+    }
+
+    public void OnMouseEnter()
+    {
+        if (distanceFromPlayer < 30.0)
+        {
+            GameVariables.interactAttempt = true;
+        }
+
+        if (distanceFromPlayer > 30.0)
+        {
+            GameVariables.interactAttempt = false;
+        }
+    }
+
+    public void OnMouseExit()
+    {
+        GameVariables.interactAttempt = false;
     }
 
     public void OnMouseDown()
     {
         //Find out if the player is holding an object.
-        if (PlayerHolding.holdingObject == attachableObject && distance < attachRange)
+        if (GameVariables.playerHoldingObject == attachableObject && distanceFromPlayer < GameVariables.InteractRange)
         {
             //Player is no longer holding the object.
-            PlayerHolding.hasObject = false;
+            GameVariables.playerHasObject = false;
 
             //Store the game object locally otherwise later we will be referencing a null object.
-            GameObject holdingObject = PlayerHolding.holdingObject;
+            GameObject holdingObject = GameVariables.playerHoldingObject;
 
             //Remove object from the player (Do we need this?)
-            holdingObject.transform.parent = null;
+         //   GameVariables.playerHoldingObject.transform.parent = null;
 
             //Attach the object to this object
             holdingObject.transform.parent = transform;

@@ -2,35 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUp : MonoBehaviour
+public class PickupableObject : MonoBehaviour
 {
+    private float distanceFromPlayer;
 
-    // Get the distance between the attached object and the player.
-    private float distance;
-    private GameObject player; // This is the reference object (player)
-
-    // Set a variable pickup range
-    public float pickupRange = 3.0f;
 
     void Start()
     {
-        //Initalize the player.
-        player = GameObject.Find("Player");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Distance between the object and the position
-        distance = Vector3.Distance(player.transform.position, transform.position);
+        distanceFromPlayer = GameVariables.DistanceFromPlayer(gameObject);
     }
 
+    public void OnMouseEnter()
+    {
+        if (distanceFromPlayer < 30.0)
+        {
+            GameVariables.interactAttempt = true;
+        }
+
+        if (distanceFromPlayer > 30.0)
+        {
+            GameVariables.interactAttempt = false;
+        }
+    }
+
+    public void OnMouseExit()
+    {
+        GameVariables.interactAttempt = false;
+    }
 
 
     public void OnMouseUp()
     {
         // First make sure the object isn't already attached to the player and the player is within proximity.
-        if (!PlayerHolding.hasObject && distance < pickupRange)
+        if (!GameVariables.playerHasObject && distanceFromPlayer < GameVariables.InteractRange)
 
         {
             //Remove physics from this object.
@@ -39,13 +49,13 @@ public class PickUp : MonoBehaviour
             this.GetComponent<Rigidbody>().useGravity = false;
 
             //attach object to the player.
-            transform.parent = player.transform;
+            transform.parent = GameVariables.Player.transform;
             this.transform.localPosition = new Vector3(0.63f, 0.25f, 1.20f);
             this.transform.localEulerAngles = new Vector3(0, 0, 0);
 
             //Player is now holding an object
-            PlayerHolding.hasObject = true;
-            PlayerHolding.holdingObject = this.gameObject;
+            GameVariables.playerHasObject = true;
+            GameVariables.playerHoldingObject = gameObject;
         }
 
     }
