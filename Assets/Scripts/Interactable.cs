@@ -49,6 +49,7 @@ public class Interactable : MonoBehaviour {
         GameVariables.interactAttempt = false;
     }
 
+
     public void OnMouseUp()
     {
         switch (ScriptType)
@@ -127,8 +128,9 @@ public class Interactable : MonoBehaviour {
         {
             if (GameObject.Find("Head").transform.Find("fNRIS Hat").name == "fNRIS Hat")
             {
-                GameObject BrainBit = (GameObject)Instantiate(Resources.Load("brain_prefab"));
+                GameObject BrainBit = (GameObject)Instantiate(Resources.Load("brain2_prefab"));
                 BrainBit.transform.position = new Vector3(0.11f, 3.71f, -0.57f);
+                BrainBit.transform.Rotate(0f, 180f, 0f);
                 Destroy(GetComponent<Interactable>());
             }
 
