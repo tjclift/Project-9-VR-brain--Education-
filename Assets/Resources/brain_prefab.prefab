@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4489089808630154}
   - component: {fileID: 33112119032352984}
   - component: {fileID: 23464370127203840}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flesh1Main_flesh1MeshGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4232635314413454}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: brain_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4169622441720084}
   - component: {fileID: 33431665649429926}
   - component: {fileID: 23171918413283746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flesh3Main_flesh3MeshGroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 4350064652637202}
   - component: {fileID: 33710566201893836}
   - component: {fileID: 23066023448621846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flesh1Main_flesh1MeshGroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4559316147988596}
   - component: {fileID: 33647219896751436}
   - component: {fileID: 23106157525516092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flesh2Main_flesh2MeshGroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4567850892258436}
   - component: {fileID: 33276832419609968}
   - component: {fileID: 23454968700601042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flesh4Main_flesh4MeshGroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 4014934025855450}
   - component: {fileID: 33607642598815240}
   - component: {fileID: 23593971626285458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flesh2Main_flesh2MeshGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 4482023755050198}
   - component: {fileID: 33288183944670578}
   - component: {fileID: 23289659570074460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flesh4Main_flesh4MeshGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 4766629547620734}
   - component: {fileID: 33253487826536566}
   - component: {fileID: 23600720482457746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flesh3Main_flesh3MeshGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}

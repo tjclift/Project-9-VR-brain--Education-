@@ -9,7 +9,8 @@ public class Interactable : MonoBehaviour {
     {
         PickupableObject,
         AttachToThisObject,
-        Trigger_Brain
+        Trigger_Brain,
+        ProjectorToggle
     };
 
     public Selection ScriptType;
@@ -62,6 +63,10 @@ public class Interactable : MonoBehaviour {
 
             case Selection.Trigger_Brain:
                 TriggerBrain();
+                break;
+
+            case Selection.ProjectorToggle:
+                ProjectorToggle();
                 break;
 
              
@@ -122,11 +127,8 @@ public class Interactable : MonoBehaviour {
         {
             if (GameObject.Find("Head").transform.Find("fNRIS Hat").name == "fNRIS Hat")
             {
-                GameObject.Find("Eye 1").transform.localPosition = new Vector3(-0.02f, 0.18f, 1.71f);
-                GameObject.Find("Eye 2").transform.localPosition = new Vector3(-0.02f, 0.18f, 3.71f);
-                GameObject.Find("Mouth").transform.localPosition = new Vector3(-0.04f, 0.63f, 0.07f);
                 GameObject BrainBit = (GameObject)Instantiate(Resources.Load("brain_prefab"));
-                BrainBit.transform.position = new Vector3(0.12f, 2.01f, 2.01f);
+                BrainBit.transform.position = new Vector3(0.11f, 3.71f, -0.57f);
                 Destroy(GetComponent<Interactable>());
             }
 
@@ -137,5 +139,19 @@ public class Interactable : MonoBehaviour {
         }
 
         return;
+    }
+
+
+    public void ProjectorToggle()
+    {
+        if (attachableObject.active == true)
+        {
+            attachableObject.active = false;
+        }
+        else
+        {
+            attachableObject.active = true;
+        }
+        
     }
 }

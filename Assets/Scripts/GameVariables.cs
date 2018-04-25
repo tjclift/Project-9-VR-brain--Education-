@@ -15,6 +15,11 @@ public class GameVariables : MonoBehaviour {
     {
         //Initalize the player.
         Player = GameObject.Find("Player");
+
+        //Disable color projectors
+        GameObject.Find("BlueProjector").active = false;
+        GameObject.Find("GreenProjector").active = false;
+        GameObject.Find("RedProjector").active = false;
     }
 
     void Update()
