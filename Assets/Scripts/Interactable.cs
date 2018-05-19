@@ -196,7 +196,7 @@ public class Interactable : MonoBehaviour {
         if (InfoExists != true)
         {
             GameObject InfoGraphic = (GameObject)Instantiate(Resources.Load("Infographic"));
-            InfoGraphic.transform.position = new Vector3(1.08f, 4.04f, 4.123f);
+            InfoGraphic.transform.position = new Vector3(1.08f, 4.04f, -4.314f);
             InfoGraphic.name = "Infographic";
             InfoExists = true;
         }
