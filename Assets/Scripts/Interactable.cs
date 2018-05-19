@@ -10,21 +10,24 @@ public class Interactable : MonoBehaviour {
         PickupableObject,
         AttachToThisObject,
         Trigger_Brain,
-        ProjectorToggle
+        ProjectorToggle,
+        Targetable
     };
 
     public Selection ScriptType;
 
     private float distanceFromPlayer;
     public GameObject attachableObject;
+    public Material originalMaterial;
+    public bool InfoExists = false;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    // Use this for initialization
+    void Start() {
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         distanceFromPlayer = GameVariables.DistanceFromPlayer(gameObject);
     }
@@ -36,6 +39,17 @@ public class Interactable : MonoBehaviour {
         if (distanceFromPlayer < 30.0)
         {
             GameVariables.interactAttempt = true;
+
+            //If it is a brain component - Outline it.
+
+            if (ScriptType == Selection.Targetable)
+            {
+                // Store the original material to change back.
+                originalMaterial = gameObject.GetComponent<Renderer>().material;
+
+                Material outlinedMaterial = Resources.Load("Outlined", typeof(Material)) as Material;
+                gameObject.GetComponent<Renderer>().material = outlinedMaterial;
+            }
         }
 
         if (distanceFromPlayer > 30.0)
@@ -47,8 +61,27 @@ public class Interactable : MonoBehaviour {
     public void OnMouseExit()
     {
         GameVariables.interactAttempt = false;
-    }
+        if (ScriptType == Selection.Targetable)
+        {
+            gameObject.GetComponent<Renderer>().material = originalMaterial;
 
+            if (InfoExists == true)
+            {
+                try
+                {
+                    Destroy(GameObject.Find("Infographic"));
+                    InfoExists = false;
+                }
+                catch (NullReferenceException e)
+                {
+                    //Do nothing.
+                }
+            }
+
+        }
+            
+ 
+    }
 
     public void OnMouseUp()
     {
@@ -68,6 +101,10 @@ public class Interactable : MonoBehaviour {
 
             case Selection.ProjectorToggle:
                 ProjectorToggle();
+                break;
+
+            case Selection.Targetable:
+                Infographic();
                 break;
 
              
@@ -126,13 +163,10 @@ public class Interactable : MonoBehaviour {
     {
         try
         {
-          //  if (GameObject.Find("Head").transform.Find("fNRIS Hat").name == "fNRIS Hat")
-        //    {
                 GameObject BrainBit = (GameObject)Instantiate(Resources.Load("brain2_prefab"));
                 BrainBit.transform.position = new Vector3(0.11f, 3.71f, -0.57f);
                 BrainBit.transform.Rotate(0f, 180f, 0f);
                 Destroy(GetComponent<Interactable>());
-         //   }
 
         }
         catch (NullReferenceException e)
@@ -156,4 +190,30 @@ public class Interactable : MonoBehaviour {
         }
         
     }
+
+    public void Infographic()
+    {
+        if (InfoExists != true)
+        {
+            GameObject InfoGraphic = (GameObject)Instantiate(Resources.Load("Infographic"));
+            InfoGraphic.transform.position = new Vector3(1.08f, 4.04f, 4.123f);
+            InfoGraphic.name = "Infographic";
+            InfoExists = true;
+        }
+        else
+        {
+            try
+            {
+                Destroy(GameObject.Find("Infographic"));
+                InfoExists = false;
+
+            }
+            catch (NullReferenceException e)
+            {
+                //Do nothing.
+            }
+        }
+        
+    }
+
 }
