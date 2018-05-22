@@ -11,7 +11,8 @@ public class Interactable : MonoBehaviour {
         AttachToThisObject,
         Trigger_Brain,
         ProjectorToggle,
-        Targetable
+        Targetable,
+        BreakModelBrain
     };
 
     public Selection ScriptType;
@@ -105,6 +106,10 @@ public class Interactable : MonoBehaviour {
 
             case Selection.Targetable:
                 Infographic();
+                break;
+
+            case Selection.BreakModelBrain:
+                BreakModelBrain();
                 break;
 
              
@@ -214,6 +219,38 @@ public class Interactable : MonoBehaviour {
             }
         }
         
+    }
+
+    public void BreakModelBrain()
+    {
+        try
+        {
+
+
+            Destroy(GameObject.Find("flesh5Main1"));
+            Destroy(GameObject.Find("flesh5Main"));
+            Destroy(GameObject.Find("flesh4Main1"));
+            Destroy(GameObject.Find("flesh3Main"));
+            Destroy(GameObject.Find("flesh3Main1"));
+            Destroy(GameObject.Find("flesh4Main1"));
+            Destroy(GameObject.Find("pSphere6 1"));
+            Destroy(GameObject.Find("flesh4Main"));
+
+            GameObject.Find("flesh1Main1").transform.localPosition = new Vector3(0.0194f, 0.0522f, -0.0328f);
+            GameObject.Find("flesh2Main1").transform.localPosition = new Vector3(0.01158895f, 0.05097441f, -0.032f);
+            GameObject.Find("flesh2Main").transform.localPosition = new Vector3(0.01158895f, 0.05097441f, -0.0047f);
+            GameObject.Find("flesh1Main").transform.localPosition = new Vector3(0.0235f, 0.0529f, -0.0112f);
+            GameObject.Find("pSphere6").transform.localPosition = new Vector3(0.0519f, 0.015f, 0f);
+
+            GameObject.Find("brain1").transform.localPosition = new Vector3(-0.0334f, -0.0428f, -0.0071f);
+
+
+        }
+
+        catch (NullReferenceException e)
+        {
+            //Do nothing
+        }
     }
 
 }
