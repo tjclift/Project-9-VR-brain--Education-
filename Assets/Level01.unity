@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 143099212}
   - component: {fileID: 143099214}
   m_Layer: 8
-  m_Name: pSphere5
+  m_Name: Brain Stem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -710,8 +710,9 @@ GameObject:
   - component: {fileID: 358674029}
   - component: {fileID: 358674031}
   - component: {fileID: 358674030}
+  - component: {fileID: 358674032}
   m_Layer: 8
-  m_Name: flesh2Main1
+  m_Name: Right Hemisphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -774,6 +775,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 358674028}
   m_Mesh: {fileID: 4300014, guid: cc0cb835155a0a34a9d1f47fc8c27f24, type: 3}
+--- !u!114 &358674032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358674028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e479df994a69d45ac7c839ae6e7c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScriptType: 4
+  attachableObject: {fileID: 0}
+  originalMaterial: {fileID: 0}
+  InfoExists: 0
 --- !u!1 &393892193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2641,7 +2657,7 @@ GameObject:
   - component: {fileID: 1300302409}
   - component: {fileID: 1300302410}
   m_Layer: 8
-  m_Name: flesh2Main
+  m_Name: Left Hemisphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3729,8 +3745,10 @@ GameObject:
   - component: {fileID: 1801489433}
   - component: {fileID: 1801489435}
   - component: {fileID: 1801489434}
+  - component: {fileID: 1801489436}
+  - component: {fileID: 1801489437}
   m_Layer: 8
-  m_Name: flesh1Main
+  m_Name: Frontal Lobe (Left)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3793,6 +3811,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1801489432}
   m_Mesh: {fileID: 4300004, guid: cc0cb835155a0a34a9d1f47fc8c27f24, type: 3}
+--- !u!114 &1801489436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1801489432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e479df994a69d45ac7c839ae6e7c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScriptType: 4
+  attachableObject: {fileID: 0}
+  originalMaterial: {fileID: 0}
+  InfoExists: 0
+--- !u!135 &1801489437
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1801489432}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.016091734
+  m_Center: {x: 0.013869231, y: 0.0036664777, z: 0.03344272}
 --- !u!1001 &1802895555
 Prefab:
   m_ObjectHideFlags: 0
@@ -4321,7 +4366,7 @@ GameObject:
   - component: {fileID: 2015904412}
   - component: {fileID: 2015904411}
   m_Layer: 8
-  m_Name: pSphere6
+  m_Name: Cerebellum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4479,8 +4524,9 @@ GameObject:
   - component: {fileID: 2036403927}
   - component: {fileID: 2036403929}
   - component: {fileID: 2036403928}
+  - component: {fileID: 2036403931}
   m_Layer: 8
-  m_Name: flesh1Main1
+  m_Name: Frontal Lobe (Right)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4543,6 +4589,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2036403926}
   m_Mesh: {fileID: 4300012, guid: cc0cb835155a0a34a9d1f47fc8c27f24, type: 3}
+--- !u!114 &2036403931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2036403926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e479df994a69d45ac7c839ae6e7c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScriptType: 0
+  attachableObject: {fileID: 0}
+  originalMaterial: {fileID: 0}
+  InfoExists: 0
 --- !u!1 &2041060584
 GameObject:
   m_ObjectHideFlags: 0

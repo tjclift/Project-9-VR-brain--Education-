@@ -70,8 +70,8 @@ public class Interactable : MonoBehaviour {
             {
                 try
                 {
-                    Destroy(GameObject.Find("Infographic"));
-                    InfoExists = false;
+                 //   Destroy(GameObject.Find("Infographic"));
+                //    InfoExists = false;
                 }
                 catch (NullReferenceException e)
                 {
@@ -105,7 +105,7 @@ public class Interactable : MonoBehaviour {
                 break;
 
             case Selection.Targetable:
-                Infographic();
+                Infographic(gameObject);
                 break;
 
             case Selection.BreakModelBrain:
@@ -196,11 +196,13 @@ public class Interactable : MonoBehaviour {
         
     }
 
-    public void Infographic()
+    public void Infographic(GameObject partSelected)
     {
         if (InfoExists != true)
         {
             GameObject InfoGraphic = (GameObject)Instantiate(Resources.Load("Infographic"));
+            InfoGraphic.transform.parent = partSelected.transform;
+            GameObject.Find("Infographic-text").GetComponent<TextMesh>().text = partSelected.name.ToString();
             InfoGraphic.transform.position = new Vector3(2.1478f, 5.028f, -3.4474f);
             InfoGraphic.name = "Infographic";
             InfoExists = true;

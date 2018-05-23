@@ -40,6 +40,12 @@ public class GameVariables : MonoBehaviour {
             }
         }
 
+        //Information always faces the player.
+        if (GameObject.Find("Infographic") != null)
+        {
+            Vector3 playerPosition = new Vector3(Player.transform.position.x, GameObject.Find("Infographic").transform.position.y, Player.transform.position.z);
+            GameObject.Find("Infographic").transform.LookAt(playerPosition);
+        }
 
     }
 
