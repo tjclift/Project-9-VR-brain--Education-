@@ -3744,8 +3744,8 @@ GameObject:
   - component: {fileID: 1926042266}
   - component: {fileID: 1926042265}
   - component: {fileID: 1926042264}
-  - component: {fileID: 1926042263}
   - component: {fileID: 1926042269}
+  - component: {fileID: 1926042263}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -3761,11 +3761,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1926042262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92099b256d90cc045a5d0e0f9cea1fec, type: 3}
+  m_Script: {fileID: 11500000, guid: d82c4ec73ed374a49a61f84ce650c8f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickedColour: {r: 1, g: 0.08823532, b: 0.08823532, a: 0}
-  clickedColour2: {r: 0.30263764, g: 0.77205884, b: 0.1532764, a: 0}
 --- !u!135 &1926042264
 SphereCollider:
   m_ObjectHideFlags: 0
