@@ -19,102 +19,182 @@ public class Interactable : MonoBehaviour {
 
     private float distanceFromPlayer;
     public GameObject attachableObject;
-    public Material originalMaterial;
     public bool InfoExists = false;
+    public bool isTargeted = false;
+    public bool m_isAxisInUse = false;
+
+    public Material originalMaterial;
 
     // Use this for initialization
     void Start() {
-
+        originalMaterial = gameObject.GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
     void Update()
     {
         distanceFromPlayer = GameVariables.DistanceFromPlayer(gameObject);
+        //Determine if player is looking at object.
+
+        if (gameObject.name.ToString() == "Frontal Lobe (Left)")
+        {
+            //
+        }
+
+        if (RaycastTesting.hitObject == gameObject)
+        {
+            Debug.Log("Hitting: " + gameObject.name.ToString());
+            GameVariables.interactAttempt = true;
+            isTargeted = true;
+
+            //If it is a brain component - Outline it.
+
+            if (ScriptType == Selection.Targetable && isTargeted == true)
+            {
+                // Store the original material to change back.
+                if (gameObject.GetComponent<Renderer>().material != Resources.Load("Outlined", typeof(Material)) as Material)
+                {
+                    gameObject.GetComponent<Renderer>().material = Resources.Load("Outlined", typeof(Material)) as Material;
+                }
+
+                else if (gameObject.GetComponent<Renderer>().material == Resources.Load("Outlined", typeof(Material)) as Material)
+                {
+                    // Do nothing
+                }
+            }
+
+            if (Input.GetAxisRaw("openvr-r-trigger-press") !=0)
+            {
+                if(m_isAxisInUse == false)
+                {
+
+                    OnMouseUp();
+                    m_isAxisInUse = true;
+                }
+            }
+
+            if ( Input.GetAxisRaw("openvr-r-trigger-press") == 0)
+            {
+                m_isAxisInUse = false;
+            }
+
+        }
+
+        else if (RaycastTesting.hitObject != gameObject || RaycastTesting.hitObject == null)
+        {
+            gameObject.GetComponent<Renderer>().material = originalMaterial;
+            GameVariables.interactAttempt = false;
+            isTargeted = false;
+        }
+
+        //Same as on mouse exist
+
+        //if (isTargeted == false)
+        //{
+        //    GameVariables.interactAttempt = false;
+        //    if (ScriptType == Selection.Targetable)
+        //    {
+        //        gameObject.GetComponent<Renderer>().material = originalMaterial;
+
+        //        if (InfoExists == true)
+        //        {
+        //            try
+        //            {
+
+        //            }
+        //            catch (NullReferenceException e)
+        //            {
+        //                //Do nothing.
+        //            }
+        //        }
+
+        //    }
+        //}
+
     }
 
 
     //If the mouse enters this object, assume an attempt to interact.
-    public void OnMouseEnter()
-    {
-        if (distanceFromPlayer < 30.0)
-        {
-            GameVariables.interactAttempt = true;
+    //public void OnMouseEnter()
+    //{
+    //    if (distanceFromPlayer < 30.0)
+    //    {
+    //        GameVariables.interactAttempt = true;
 
-            //If it is a brain component - Outline it.
+    //        //If it is a brain component - Outline it.
 
-            if (ScriptType == Selection.Targetable)
-            {
-                // Store the original material to change back.
-                originalMaterial = gameObject.GetComponent<Renderer>().material;
+    //        if (ScriptType == Selection.Targetable)
+    //        {
+    //            // Store the original material to change back.
+    //            originalMaterial = gameObject.GetComponent<Renderer>().material;
 
-                Material outlinedMaterial = Resources.Load("Outlined", typeof(Material)) as Material;
-                gameObject.GetComponent<Renderer>().material = outlinedMaterial;
-            }
-        }
+    //            Material outlinedMaterial = Resources.Load("Outlined", typeof(Material)) as Material;
+    //            gameObject.GetComponent<Renderer>().material = outlinedMaterial;
+    //        }
+    //    }
 
-        if (distanceFromPlayer > 30.0)
-        {
-            GameVariables.interactAttempt = false;
-        }
-    }
+    //    if (distanceFromPlayer > 30.0)
+    //    {
+    //        GameVariables.interactAttempt = false;
+    //    }
+    //}
 
-    public void OnMouseExit()
-    {
-        GameVariables.interactAttempt = false;
-        if (ScriptType == Selection.Targetable)
-        {
-            gameObject.GetComponent<Renderer>().material = originalMaterial;
+    //public void OnMouseExit()
+    //{
+    //    GameVariables.interactAttempt = false;
+    //    if (ScriptType == Selection.Targetable)
+    //    {
+    //        gameObject.GetComponent<Renderer>().material = originalMaterial;
 
-            if (InfoExists == true)
-            {
-                try
-                {
-                 //   Destroy(GameObject.Find("Infographic"));
-                //    InfoExists = false;
-                }
-                catch (NullReferenceException e)
-                {
-                    //Do nothing.
-                }
-            }
+    //        if (InfoExists == true)
+    //        {
+    //            try
+    //            {
+    //             //   Destroy(GameObject.Find("Infographic"));
+    //            //    InfoExists = false;
+    //            }
+    //            catch (NullReferenceException e)
+    //            {
+    //                //Do nothing.
+    //            }
+    //        }
 
-        }
+    //    }
             
  
-    }
+    //}
 
     public void OnMouseUp()
     {
-        switch (ScriptType)
-        {
-            case Selection.PickupableObject:
-                PickupableObject();
+            switch (ScriptType)
+            {
+                case Selection.PickupableObject:
+                    PickupableObject();
                     break;
 
-            case Selection.AttachToThisObject:
-                AttachToThisObject();
-                break;
+                case Selection.AttachToThisObject:
+                    AttachToThisObject();
+                    break;
 
-            case Selection.Trigger_Brain:
-                TriggerBrain();
-                break;
+                case Selection.Trigger_Brain:
+                    TriggerBrain();
+                    break;
 
-            case Selection.ProjectorToggle:
-                ProjectorToggle();
-                break;
+                case Selection.ProjectorToggle:
+                    ProjectorToggle();
+                    break;
 
-            case Selection.Targetable:
-                Infographic(gameObject);
-                break;
+                case Selection.Targetable:
+                    Infographic(gameObject);
+                    break;
 
-            case Selection.BreakModelBrain:
-                BreakModelBrain();
-                break;
-
-             
-        }
+                case Selection.BreakModelBrain:
+                    BreakModelBrain();
+                    break;
+            }
     }
+
+
 
 
     // = = = = = = = = = = = = //
@@ -201,9 +281,36 @@ public class Interactable : MonoBehaviour {
         if (InfoExists != true)
         {
             GameObject InfoGraphic = (GameObject)Instantiate(Resources.Load("Infographic"));
-            InfoGraphic.transform.parent = partSelected.transform;
-            GameObject.Find("Infographic-text").GetComponent<TextMesh>().text = partSelected.name.ToString();
-            InfoGraphic.transform.position = new Vector3(2.1478f, 5.028f, -3.4474f);
+
+            switch (partSelected.name.ToString())
+            {
+                case "Left Hemisphere":
+                    InfoGraphic.transform.position = new Vector3(2.1478f, 5.028f, -3.4474f);
+                    GameObject.Find("Infographic-text").GetComponent<TextMesh>().text = partSelected.name.ToString();
+                    InfoGraphic.transform.parent = partSelected.transform;
+                    break;
+
+                case "Frontal Lobe (Left)":
+                    InfoGraphic.transform.position = new Vector3(-2.08f, 4.95f, -3.06f);
+                    GameObject.Find("Infographic-text").GetComponent<TextMesh>().text = partSelected.name.ToString();
+                    InfoGraphic.transform.parent = partSelected.transform;
+                    break;
+
+                case "Frontal Lobe (Right)":
+                    InfoGraphic.transform.position = new Vector3(-1.273f, 5.502f, -1.636f);
+                    GameObject.Find("Infographic-text").GetComponent<TextMesh>().text = partSelected.name.ToString();
+                    InfoGraphic.transform.parent = partSelected.transform;
+                    break;
+
+                case "Right Hemisphere":
+                    InfoGraphic.transform.position = new Vector3(1.719f, 5.502f, -1.636f);
+                    GameObject.Find("Infographic-text").GetComponent<TextMesh>().text = partSelected.name.ToString();
+                    InfoGraphic.transform.parent = partSelected.transform;
+                    break;
+
+
+
+            }
             InfoGraphic.name = "Infographic";
             InfoExists = true;
         }
@@ -227,8 +334,6 @@ public class Interactable : MonoBehaviour {
     {
         try
         {
-
-
             Destroy(GameObject.Find("flesh5Main1"));
             Destroy(GameObject.Find("flesh5Main"));
             Destroy(GameObject.Find("flesh4Main1"));
@@ -240,7 +345,7 @@ public class Interactable : MonoBehaviour {
 
             GameObject.Find("flesh1Main1").transform.localPosition = new Vector3(0.0194f, 0.0522f, -0.0328f);
             GameObject.Find("flesh2Main1").transform.localPosition = new Vector3(0.01158895f, 0.05097441f, -0.032f);
-            GameObject.Find("flesh2Main").transform.localPosition = new Vector3(0.01158895f, 0.05097441f, -0.0047f);
+            GameObject.Find("Left Hemisphere").transform.localPosition = new Vector3(235235f,235235f, 23523f);
             GameObject.Find("flesh1Main").transform.localPosition = new Vector3(0.0235f, 0.0529f, -0.0112f);
             GameObject.Find("pSphere6").transform.localPosition = new Vector3(0.0519f, 0.015f, 0f);
 

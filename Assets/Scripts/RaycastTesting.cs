@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RaycastTesting : MonoBehaviour {
-    
 
+    public static RaycastHit hit;
+    public static GameObject hitObject;
     // Use this for initialization
     void Start () {
 		
@@ -14,29 +15,16 @@ public class RaycastTesting : MonoBehaviour {
 	void Update ()
     {
         
-        Vector3 fwd = transform.TransformDirection(Vector3.back);
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
-        RaycastHit hit;
-
-        if (Physics.Raycast(transform.position, fwd, out hit, 5.5f))
+        if (Physics.Raycast(transform.position, fwd, out hit, 3.0f))
         {
-            print("There is something in front of the object!");
-            Debug.Log(hit.transform.gameObject.name);
-            Debug.Log(hit.distance);
-
-            if (hit.transform.gameObject.name == "Player")
-            {
-                transform.GetComponent<Renderer>().material.color = Color.blue;
-            }
-
-            if (hit.transform.gameObject.name == "fNRIS Hat")
-            {
-                transform.GetComponent<Renderer>().material.color = Color.black;
-            }
+            hitObject = hit.transform.gameObject;
+            print(hitObject.name.ToString() + " - Distance: " + hit.distance.ToString());
         }
         else
         {
-            transform.GetComponent<Renderer>().material.color = Color.white;
+            hitObject = null;
         }
             
     }
