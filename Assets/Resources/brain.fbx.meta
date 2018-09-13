@@ -1,0 +1,342 @@
+fileFormatVersion: 2
+guid: cc0cb835155a0a34a9d1f47fc8c27f24
+timeCreated: 1524646979
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: airTranspRed1Main
+    100002: airTranspRed1Main 1
+    100004: airTranspRed1MeshGroup
+    100006: airTranspRed1MeshGroup 1
+    100008: airTranspRed2Main
+    100010: airTranspRed2Main 1
+    100012: airTranspRed2MeshGroup
+    100014: airTranspRed2MeshGroup 1
+    100016: airTranspRed3Main
+    100018: airTranspRed3Main 1
+    100020: airTranspRed3MeshGroup
+    100022: airTranspRed3MeshGroup 1
+    100024: airTranspRed4Main
+    100026: airTranspRed4Main 1
+    100028: airTranspRed4MeshGroup
+    100030: airTranspRed4MeshGroup 1
+    100032: airTranspRed5Main
+    100034: airTranspRed5Main 1
+    100036: airTranspRed5MeshGroup
+    100038: airTranspRed5MeshGroup 1
+    100040: airTranspRed6Main
+    100042: airTranspRed6Main 1
+    100044: airTranspRed6MeshGroup
+    100046: airTranspRed6MeshGroup 1
+    100048: airTranspRed7Main
+    100050: airTranspRed7Main 1
+    100052: airTranspRed7MeshGroup
+    100054: airTranspRed7MeshGroup 1
+    100056: airTranspRed8Main
+    100058: airTranspRed8Main 1
+    100060: airTranspRed8MeshGroup
+    100062: airTranspRed8MeshGroup 1
+    100064: airTranspRed9Main
+    100066: airTranspRed9Main 1
+    100068: airTranspRed9MeshGroup
+    100070: airTranspRed9MeshGroup 1
+    100072: //RootNode
+    100074: brain1
+    100076: cerebellum
+    100078: cerebellum1
+    100080: ffd4Base
+    100082: ffd4Lattice
+    100084: ffd5Base
+    100086: ffd5Lattice
+    100088: ffd6Base
+    100090: ffd6Base 1
+    100092: ffd6Base1
+    100094: ffd6Base1 1
+    100096: ffd6Lattice
+    100098: ffd6Lattice 1
+    100100: ffd6Lattice1
+    100102: ffd6Lattice1 1
+    100104: flesh1Main
+    100106: flesh1Main1
+    100108: flesh1MeshGroup
+    100110: flesh1MeshGroup1
+    100112: flesh2Main
+    100114: flesh2Main1
+    100116: flesh2MeshGroup
+    100118: flesh2MeshGroup1
+    100120: flesh3Main
+    100122: flesh3Main1
+    100124: flesh3MeshGroup
+    100126: flesh3MeshGroup1
+    100128: flesh4Main
+    100130: flesh4Main1
+    100132: flesh4MeshGroup
+    100134: flesh4MeshGroup1
+    100136: flesh5Main
+    100138: flesh5Main1
+    100140: flesh5MeshGroup
+    100142: flesh5MeshGroup1
+    100144: group1
+    100146: pSphere4
+    100148: pSphere5
+    100150: pSphere6
+    100152: pSphere6 1
+    400000: airTranspRed1Main
+    400002: airTranspRed1Main 1
+    400004: airTranspRed1MeshGroup
+    400006: airTranspRed1MeshGroup 1
+    400008: airTranspRed2Main
+    400010: airTranspRed2Main 1
+    400012: airTranspRed2MeshGroup
+    400014: airTranspRed2MeshGroup 1
+    400016: airTranspRed3Main
+    400018: airTranspRed3Main 1
+    400020: airTranspRed3MeshGroup
+    400022: airTranspRed3MeshGroup 1
+    400024: airTranspRed4Main
+    400026: airTranspRed4Main 1
+    400028: airTranspRed4MeshGroup
+    400030: airTranspRed4MeshGroup 1
+    400032: airTranspRed5Main
+    400034: airTranspRed5Main 1
+    400036: airTranspRed5MeshGroup
+    400038: airTranspRed5MeshGroup 1
+    400040: airTranspRed6Main
+    400042: airTranspRed6Main 1
+    400044: airTranspRed6MeshGroup
+    400046: airTranspRed6MeshGroup 1
+    400048: airTranspRed7Main
+    400050: airTranspRed7Main 1
+    400052: airTranspRed7MeshGroup
+    400054: airTranspRed7MeshGroup 1
+    400056: airTranspRed8Main
+    400058: airTranspRed8Main 1
+    400060: airTranspRed8MeshGroup
+    400062: airTranspRed8MeshGroup 1
+    400064: airTranspRed9Main
+    400066: airTranspRed9Main 1
+    400068: airTranspRed9MeshGroup
+    400070: airTranspRed9MeshGroup 1
+    400072: //RootNode
+    400074: brain1
+    400076: cerebellum
+    400078: cerebellum1
+    400080: ffd4Base
+    400082: ffd4Lattice
+    400084: ffd5Base
+    400086: ffd5Lattice
+    400088: ffd6Base
+    400090: ffd6Base 1
+    400092: ffd6Base1
+    400094: ffd6Base1 1
+    400096: ffd6Lattice
+    400098: ffd6Lattice 1
+    400100: ffd6Lattice1
+    400102: ffd6Lattice1 1
+    400104: flesh1Main
+    400106: flesh1Main1
+    400108: flesh1MeshGroup
+    400110: flesh1MeshGroup1
+    400112: flesh2Main
+    400114: flesh2Main1
+    400116: flesh2MeshGroup
+    400118: flesh2MeshGroup1
+    400120: flesh3Main
+    400122: flesh3Main1
+    400124: flesh3MeshGroup
+    400126: flesh3MeshGroup1
+    400128: flesh4Main
+    400130: flesh4Main1
+    400132: flesh4MeshGroup
+    400134: flesh4MeshGroup1
+    400136: flesh5Main
+    400138: flesh5Main1
+    400140: flesh5MeshGroup
+    400142: flesh5MeshGroup1
+    400144: group1
+    400146: pSphere4
+    400148: pSphere5
+    400150: pSphere6
+    400152: pSphere6 1
+    2100000: phong1
+    2100002: cerebulem
+    2100004: white
+    2100006: lambert1
+    2300000: airTranspRed1Main
+    2300002: airTranspRed1Main 1
+    2300004: airTranspRed2Main
+    2300006: airTranspRed2Main 1
+    2300008: airTranspRed3Main
+    2300010: airTranspRed3Main 1
+    2300012: airTranspRed4Main
+    2300014: airTranspRed4Main 1
+    2300016: airTranspRed5Main
+    2300018: airTranspRed5Main 1
+    2300020: airTranspRed6Main
+    2300022: airTranspRed6Main 1
+    2300024: airTranspRed7Main
+    2300026: airTranspRed7Main 1
+    2300028: airTranspRed8Main
+    2300030: airTranspRed8Main 1
+    2300032: airTranspRed9Main
+    2300034: airTranspRed9Main 1
+    2300036: flesh1Main
+    2300038: flesh1Main1
+    2300040: flesh2Main
+    2300042: flesh2Main1
+    2300044: flesh3Main
+    2300046: flesh3Main1
+    2300048: flesh4Main
+    2300050: flesh4Main1
+    2300052: flesh5Main
+    2300054: flesh5Main1
+    2300056: pSphere4
+    2300058: pSphere5
+    2300060: pSphere6
+    2300062: pSphere6 1
+    3300000: airTranspRed1Main
+    3300002: airTranspRed1Main 1
+    3300004: airTranspRed2Main
+    3300006: airTranspRed2Main 1
+    3300008: airTranspRed3Main
+    3300010: airTranspRed3Main 1
+    3300012: airTranspRed4Main
+    3300014: airTranspRed4Main 1
+    3300016: airTranspRed5Main
+    3300018: airTranspRed5Main 1
+    3300020: airTranspRed6Main
+    3300022: airTranspRed6Main 1
+    3300024: airTranspRed7Main
+    3300026: airTranspRed7Main 1
+    3300028: airTranspRed8Main
+    3300030: airTranspRed8Main 1
+    3300032: airTranspRed9Main
+    3300034: airTranspRed9Main 1
+    3300036: flesh1Main
+    3300038: flesh1Main1
+    3300040: flesh2Main
+    3300042: flesh2Main1
+    3300044: flesh3Main
+    3300046: flesh3Main1
+    3300048: flesh4Main
+    3300050: flesh4Main1
+    3300052: flesh5Main
+    3300054: flesh5Main1
+    3300056: pSphere4
+    3300058: pSphere5
+    3300060: pSphere6
+    3300062: pSphere6 1
+    4300000: pSphere4
+    4300002: flesh5Main
+    4300004: flesh1Main
+    4300006: flesh2Main
+    4300008: flesh4Main
+    4300010: flesh3Main
+    4300012: flesh1Main1
+    4300014: flesh2Main1
+    4300016: flesh3Main1
+    4300018: flesh4Main1
+    4300020: flesh5Main1
+    4300022: pSphere6
+    4300024: airTranspRed9Main
+    4300026: airTranspRed8Main
+    4300028: airTranspRed7Main
+    4300030: airTranspRed6Main
+    4300032: airTranspRed5Main
+    4300034: airTranspRed4Main
+    4300036: airTranspRed3Main
+    4300038: airTranspRed2Main
+    4300040: airTranspRed1Main
+    4300042: pSphere6
+    4300044: airTranspRed9Main
+    4300046: airTranspRed8Main
+    4300048: airTranspRed7Main
+    4300050: airTranspRed6Main
+    4300052: airTranspRed5Main
+    4300054: airTranspRed4Main
+    4300056: airTranspRed3Main
+    4300058: airTranspRed2Main
+    4300060: airTranspRed1Main
+    4300062: pSphere5
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
