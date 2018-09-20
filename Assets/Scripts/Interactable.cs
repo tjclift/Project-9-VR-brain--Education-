@@ -168,7 +168,7 @@ public class Interactable : MonoBehaviour {
     {
             switch (ScriptType)
             {
-                case Selection.PickupableObject:
+              /* case Selection.PickupableObject:
                     PickupableObject();
                     break;
 
@@ -184,6 +184,7 @@ public class Interactable : MonoBehaviour {
                     ProjectorToggle();
                     break;
 
+                */
                 case Selection.Targetable:
                     Infographic(gameObject);
                     break;
@@ -200,6 +201,7 @@ public class Interactable : MonoBehaviour {
     // = = = = = = = = = = = = //
     // Unique Events Go Here! //
     // = = = = = = = = = = = = //
+    /*
 
     public void PickupableObject()
     {
@@ -221,7 +223,9 @@ public class Interactable : MonoBehaviour {
             GameVariables.playerHoldingObject = gameObject;
         }
     }
+    */
 
+   /* 
     public void AttachToThisObject()
     {
         //Find out if the player is holding an object.
@@ -243,6 +247,7 @@ public class Interactable : MonoBehaviour {
 
         }
     }
+    */
 
     public void TriggerBrain()
     {
@@ -254,7 +259,7 @@ public class Interactable : MonoBehaviour {
                 Destroy(GetComponent<Interactable>());
 
         }
-        catch (NullReferenceException e)
+        catch (NullReferenceException)
         {
             //do nothing
         }
@@ -262,7 +267,7 @@ public class Interactable : MonoBehaviour {
         return;
     }
 
-
+    /*
     public void ProjectorToggle()
     {
         if (attachableObject.active == true)
@@ -275,6 +280,7 @@ public class Interactable : MonoBehaviour {
         }
         
     }
+*/
 
     public void Infographic(GameObject partSelected)
     {
@@ -322,7 +328,7 @@ public class Interactable : MonoBehaviour {
                 InfoExists = false;
 
             }
-            catch (NullReferenceException e)
+            catch (NullReferenceException)
             {
                 //Do nothing.
             }
@@ -354,7 +360,7 @@ public class Interactable : MonoBehaviour {
 
         }
 
-        catch (NullReferenceException e)
+        catch (NullReferenceException)
         {
             //Do nothing
         }
