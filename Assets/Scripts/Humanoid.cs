@@ -41,6 +41,23 @@ public class Humanoid : MonoBehaviour {
 		//stem.handleKneeActionEvent ();
 		// send knee action event to EEG
 	}
+	
+	public void handleKneeBrainPositionBack ()
+	{
+		//print ("Knee touch event occurs");
+		// start kicking action for 5 s
+		//kicking = true;
+		//StartCoroutine (startKickingTimer ());
+		// send knee action event to brain
+		stemposition.handleKneeActionEventBack ();
+		cblmposition.handleKneeActionEventBack ();
+		lbrainposition.handleKneeActionEventBack ();
+		rbrainposition.handleKneeActionEventBack ();
+		//brainl.handleKneeActionEvent ();
+		//brainR.handleKneeActionEvent ();
+		//stem.handleKneeActionEvent ();
+		// send knee action event to EEG
+	}
 
 	public void handleKneeTouchStem ()
 	{

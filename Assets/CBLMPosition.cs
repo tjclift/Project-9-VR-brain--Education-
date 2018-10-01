@@ -20,6 +20,21 @@ public class CBLMPosition : MonoBehaviour {
 		//this.transform.GetChild (2).position = new Vector3 (0.0f, 1.5f,0.0f);
 		//this.transform.GetChild (3).position = new Vector3 (0.0f, 1.5f,0.0f);
 	}
+	
+	public void handleKneeActionEventBack ()
+	{
+		print ("Brain Position Changed");
+		tempPos = transform.position;
+
+		tempPos.z = -0.4f;
+
+		transform.position = tempPos;
+		//tempPos.x += 0.04f;
+		//this.transform.GetChild (0).position = tempPos ;
+		//this.transform.GetChild (1).position = new Vector3 (0.0f, 1.5f,0.0f);
+		//this.transform.GetChild (2).position = new Vector3 (0.0f, 1.5f,0.0f);
+		//this.transform.GetChild (3).position = new Vector3 (0.0f, 1.5f,0.0f);
+	}
 
 	// Use this for initialization
 	void Start () {
