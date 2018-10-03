@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 9
+  controlID: 26
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 10
+  controlID: 40
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 120
+  controlID: 41
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -329,17 +329,17 @@ MonoBehaviour:
     m_Folders:
     - Assets/Materials
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 50
   m_LastFolders:
   - Assets/Materials
-  m_LastFoldersGridSize: -1
+  m_LastFoldersGridSize: 50
   m_LastProjectPath: C:\Users\keryz\Documents\GitHub\Project-9-VR-brain--Education-
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b62f0000
-    m_LastClickedID: 12214
-    m_ExpandedIDs: 000000000c2f0000b62f0000ae300000003200000a3600003236000000ca9a3bffffff7f
+    m_SelectedIDs: ba290000
+    m_LastClickedID: 10682
+    m_ExpandedIDs: 0000000006290000ba290000be2a00001a2c00005a3000008230000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -367,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c2f0000b62f0000ae300000003200000a36000032360000
+    m_ExpandedIDs: 0000000006290000ba290000be2a00001a2c00005a30000082300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -419,8 +419,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_ScrollPosition: {x: 0, y: 59}
+    m_GridSize: 50
   m_DirectoriesAreaWidth: 178
 --- !u!114 &14
 MonoBehaviour:
@@ -484,10 +484,10 @@ MonoBehaviour:
     height: 450
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 112}
-    m_SelectedIDs: 16c9ffff3a370000
-    m_LastClickedID: -14058
-    m_ExpandedIDs: 16c9ffff60c9ffff00000000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 3ecaffff
+    m_LastClickedID: -13762
+    m_ExpandedIDs: 3ecaffff50ebffff9efbffff00000000ec310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -569,13 +569,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.12940961, y: -0.6004534, z: 0.09925647, w: -0.78285915}
+    m_Target: {x: -0.059435297, y: -0.6116129, z: 0.04615393, w: -0.7875779}
     speed: 2
-    m_Value: {x: -0.12940887, y: -0.6004499, z: 0.099255905, w: -0.7828547}
+    m_Value: {x: -0.059434935, y: -0.6116092, z: 0.04615365, w: -0.78757316}
   m_Size:
-    m_Target: 5.2512407
+    m_Target: 7.8737764
     speed: 2
-    m_Value: 5.2512407
+    m_Value: 7.8737764
   m_Ortho:
     m_Target: 0
     speed: 2
