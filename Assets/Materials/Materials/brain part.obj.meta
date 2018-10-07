@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: 692625ad0a1ad224ca65dada1a309eba
+timeCreated: 1538452020
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: frontal_lobe_smoothskin2Main_smoothskin2MeshGroup
+    100004: group_pasted__group1_pasted__smoothskin2Main_pasted__smoothskin2MeshGroup
+    100006: group_pasted__smoothskin1Main_pasted__smoothskin1MeshGroup_pasted__group1
+    100008: group_pasted__smoothskin4Main_pasted__smoothskin4MeshGroup
+    100010: group_pasted__smoothskin5Main_pasted__smoothskin5MeshGroup
+    100012: pasted__smoothskin3Main_pasted__smoothskin3MeshGroup_group
+    100014: smoothskin1Main_smoothskin1MeshGroup_frontal_lobe
+    100016: smoothskin3Main_parietal_lobe
+    100018: smoothskin4Main_termpral_lobe
+    100020: smoothskin5Main_occipital_lobe
+    400000: //RootNode
+    400002: frontal_lobe_smoothskin2Main_smoothskin2MeshGroup
+    400004: group_pasted__group1_pasted__smoothskin2Main_pasted__smoothskin2MeshGroup
+    400006: group_pasted__smoothskin1Main_pasted__smoothskin1MeshGroup_pasted__group1
+    400008: group_pasted__smoothskin4Main_pasted__smoothskin4MeshGroup
+    400010: group_pasted__smoothskin5Main_pasted__smoothskin5MeshGroup
+    400012: pasted__smoothskin3Main_pasted__smoothskin3MeshGroup_group
+    400014: smoothskin1Main_smoothskin1MeshGroup_frontal_lobe
+    400016: smoothskin3Main_parietal_lobe
+    400018: smoothskin4Main_termpral_lobe
+    400020: smoothskin5Main_occipital_lobe
+    2100000: frontal_lobe_smoothskin2Main_smoothskin2MeshGroupMat
+    2100002: group_pasted__group1_pasted__smoothskin2Main_pasted__smoothskin2MeshGroupMat
+    2100004: group_pasted__smoothskin1Main_pasted__smoothskin1MeshGroup_pasted__group1Mat
+    2100006: group_pasted__smoothskin4Main_pasted__smoothskin4MeshGroupMat
+    2100008: group_pasted__smoothskin5Main_pasted__smoothskin5MeshGroupMat
+    2100010: pasted__smoothskin3Main_pasted__smoothskin3MeshGroup_groupMat
+    2100012: smoothskin1Main_smoothskin1MeshGroup_frontal_lobeMat
+    2100014: smoothskin3Main_parietal_lobeMat
+    2100016: smoothskin4Main_termpral_lobeMat
+    2100018: smoothskin5Main_occipital_lobeMat
+    2300000: frontal_lobe_smoothskin2Main_smoothskin2MeshGroup
+    2300002: group_pasted__group1_pasted__smoothskin2Main_pasted__smoothskin2MeshGroup
+    2300004: group_pasted__smoothskin1Main_pasted__smoothskin1MeshGroup_pasted__group1
+    2300006: group_pasted__smoothskin4Main_pasted__smoothskin4MeshGroup
+    2300008: group_pasted__smoothskin5Main_pasted__smoothskin5MeshGroup
+    2300010: pasted__smoothskin3Main_pasted__smoothskin3MeshGroup_group
+    2300012: smoothskin1Main_smoothskin1MeshGroup_frontal_lobe
+    2300014: smoothskin3Main_parietal_lobe
+    2300016: smoothskin4Main_termpral_lobe
+    2300018: smoothskin5Main_occipital_lobe
+    3300000: frontal_lobe_smoothskin2Main_smoothskin2MeshGroup
+    3300002: group_pasted__group1_pasted__smoothskin2Main_pasted__smoothskin2MeshGroup
+    3300004: group_pasted__smoothskin1Main_pasted__smoothskin1MeshGroup_pasted__group1
+    3300006: group_pasted__smoothskin4Main_pasted__smoothskin4MeshGroup
+    3300008: group_pasted__smoothskin5Main_pasted__smoothskin5MeshGroup
+    3300010: pasted__smoothskin3Main_pasted__smoothskin3MeshGroup_group
+    3300012: smoothskin1Main_smoothskin1MeshGroup_frontal_lobe
+    3300014: smoothskin3Main_parietal_lobe
+    3300016: smoothskin4Main_termpral_lobe
+    3300018: smoothskin5Main_occipital_lobe
+    4300000: frontal_lobe_smoothskin2Main_smoothskin2MeshGroup
+    4300002: group_pasted__group1_pasted__smoothskin2Main_pasted__smoothskin2MeshGroup
+    4300004: group_pasted__smoothskin1Main_pasted__smoothskin1MeshGroup_pasted__group1
+    4300006: group_pasted__smoothskin4Main_pasted__smoothskin4MeshGroup
+    4300008: group_pasted__smoothskin5Main_pasted__smoothskin5MeshGroup
+    4300010: pasted__smoothskin3Main_pasted__smoothskin3MeshGroup_group
+    4300012: smoothskin1Main_smoothskin1MeshGroup_frontal_lobe
+    4300014: smoothskin3Main_parietal_lobe
+    4300016: smoothskin4Main_termpral_lobe
+    4300018: smoothskin5Main_occipital_lobe
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
